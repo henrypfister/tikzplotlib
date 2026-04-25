@@ -1,6 +1,6 @@
 \begin{tikzpicture}
 
-\definecolor{darkgray176}{RGB}{176,176,176}
+\definecolor{darkgrey176}{RGB}{176,176,176}
 \definecolor{steelblue31119180}{RGB}{31,119,180}
 
 \begin{axis}[
@@ -8,14 +8,41 @@ log basis x={10},
 log basis y={10},
 tick align=outside,
 tick pos=left,
-x grid style={darkgray176},
+x grid style={darkgrey176},
 xmin=0.50118723, xmax=1995262.3,
 xmode=log,
 xtick style={color=black},
-y grid style={darkgray176},
+xtick={0.01,0.1,1,10,100,1000,10000,100000,1000000,10000000,1e+08},
+xticklabels={
+  \(\displaystyle {10^{-2}}\),
+  \(\displaystyle {10^{-1}}\),
+  \(\displaystyle {10^{0}}\),
+  \(\displaystyle {10^{1}}\),
+  \(\displaystyle {10^{2}}\),
+  \(\displaystyle {10^{3}}\),
+  \(\displaystyle {10^{4}}\),
+  \(\displaystyle {10^{5}}\),
+  \(\displaystyle {10^{6}}\),
+  \(\displaystyle {10^{7}}\),
+  \(\displaystyle {10^{8}}\)
+},
+y grid style={darkgrey176},
 ymin=0.25118864, ymax=3.9810717e+12,
 ymode=log,
-ytick style={color=black}
+ytick style={color=black},
+ytick={0.001,0.1,10,1000,100000,10000000,1e+09,1e+11,1e+13,1e+15},
+yticklabels={
+  \(\displaystyle {10^{-3}}\),
+  \(\displaystyle {10^{-1}}\),
+  \(\displaystyle {10^{1}}\),
+  \(\displaystyle {10^{3}}\),
+  \(\displaystyle {10^{5}}\),
+  \(\displaystyle {10^{7}}\),
+  \(\displaystyle {10^{9}}\),
+  \(\displaystyle {10^{11}}\),
+  \(\displaystyle {10^{13}}\),
+  \(\displaystyle {10^{15}}\)
+}
 ]
 \addplot [line width=0.84pt, steelblue31119180]
 table {%

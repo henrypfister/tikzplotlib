@@ -16,7 +16,19 @@ ymajorgrids,
 ymin=0.35481339, ymax=2.8183829e+09,
 yminorgrids,
 ymode=log,
-ytick style={color=black}
+ytick style={color=black},
+ytick={0.001,0.1,10,1000,100000,10000000,1e+09,1e+11,1e+13},
+yticklabels={
+  \(\displaystyle {10^{-3}}\),
+  \(\displaystyle {10^{-1}}\),
+  \(\displaystyle {10^{1}}\),
+  \(\displaystyle {10^{3}}\),
+  \(\displaystyle {10^{5}}\),
+  \(\displaystyle {10^{7}}\),
+  \(\displaystyle {10^{9}}\),
+  \(\displaystyle {10^{11}}\),
+  \(\displaystyle {10^{13}}\)
+}
 ]
 \addplot [ultra thin, blue]
 table {%

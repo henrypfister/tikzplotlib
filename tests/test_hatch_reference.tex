@@ -1,8 +1,8 @@
 \begin{tikzpicture}
 
-\definecolor{darkgray176}{RGB}{176,176,176}
+\definecolor{darkgrey176}{RGB}{176,176,176}
 \definecolor{green}{RGB}{0,128,0}
-\definecolor{lightgray204}{RGB}{204,204,204}
+\definecolor{lightgrey204}{RGB}{204,204,204}
 \definecolor{slateblue12776204}{RGB}{127,76,204}
 \definecolor{steelblue31119180}{RGB}{31,119,180}
 \definecolor{yellow}{RGB}{255,255,0}
@@ -11,10 +11,10 @@
 \nextgroupplot[
 tick align=outside,
 tick pos=left,
-x grid style={darkgray176},
+x grid style={darkgrey176},
 xmin=0.41, xmax=4.59,
 xtick style={color=black},
-y grid style={darkgray176},
+y grid style={darkgrey176},
 ymin=0, ymax=10.5,
 ytick style={color=black}
 ]
@@ -30,10 +30,10 @@ ytick style={color=black}
 \nextgroupplot[
 tick align=outside,
 tick pos=left,
-x grid style={darkgray176},
+x grid style={darkgrey176},
 xmin=0.41, xmax=4.59,
 xtick style={color=black},
-y grid style={darkgray176},
+y grid style={darkgrey176},
 ymin=0, ymax=10.5,
 ytick style={color=black}
 ]
@@ -48,13 +48,20 @@ ytick style={color=black}
 
 \nextgroupplot[
 legend cell align={left},
-legend style={fill opacity=0.8, draw opacity=1, text opacity=1, draw=lightgray204},
+legend style={
+  fill opacity=0.8,
+  draw opacity=1,
+  text opacity=1,
+  at={(0.03,0.03)},
+  anchor=south west,
+  draw=lightgrey204
+},
 tick align=outside,
 tick pos=left,
-x grid style={darkgray176},
+x grid style={darkgrey176},
 xmin=0, xmax=6,
 xtick style={color=black},
-y grid style={darkgray176},
+y grid style={darkgrey176},
 ymin=0, ymax=2.5,
 ytick style={color=black}
 ]

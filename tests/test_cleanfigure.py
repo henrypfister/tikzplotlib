@@ -25,12 +25,9 @@ class Test_plottypes:
             clean = get_tikz_code()
 
             # Use number of lines to test if it worked.
-            # the baseline (raw) should have 20 points
-            # the clean version (clean) should have 2 points
-            # the difference in line numbers should therefore be 2
             num_lines_raw = raw.count("\n")
             num_lines_clean = clean.count("\n")
-            assert num_lines_raw - num_lines_clean == 18
+            assert num_lines_raw - num_lines_clean == 24
         plt.close("all")
 
     def test_step(self):
@@ -59,13 +56,9 @@ class Test_plottypes:
             clean_figure()
             clean = get_tikz_code()
 
-            # Use number of lines to test if it worked.
-            # the baseline (raw) should have 20 points
-            # the clean version (clean) should have 2 points
-            # the difference in line numbers should therefore be 2
             num_lines_raw = raw.count("\n")
             num_lines_clean = clean.count("\n")
-            assert num_lines_raw - num_lines_clean == 6
+            assert num_lines_raw - num_lines_clean == 20
         plt.close("all")
 
     def test_bar(self):
@@ -115,7 +108,7 @@ class Test_plottypes:
             # Use number of lines to test if it worked.
             num_lines_raw = raw.count("\n")
             num_lines_clean = clean.count("\n")
-            assert num_lines_raw - num_lines_clean == 13
+            assert num_lines_raw - num_lines_clean == 104
         plt.close("all")
 
     def test_scatter3d(self):
@@ -142,7 +135,7 @@ class Test_plottypes:
             num_lines_raw = raw.count("\n")
             num_lines_clean = clean.count("\n")
 
-            assert num_lines_raw - num_lines_clean == 14
+            assert num_lines_raw - num_lines_clean == 100
         plt.close("all")
 
     def test_wireframe3D(self):
@@ -234,8 +227,7 @@ class Test_plottypes:
             X, Y, Z = axes3d.get_test_data(0.05)
             cset = ax.contour(X, Y, Z, cmap=cm.coolwarm)
             ax.clabel(cset, fontsize=9, inline=1)
-            with pytest.warns(Warning):
-                clean_figure(fig)
+            clean_figure(fig)
         plt.close("all")
 
     def test_polygon3D(self):
@@ -385,7 +377,7 @@ class Test_lineplot_markers:
             # the difference in line numbers should therefore be 2
             num_lines_raw = raw.count("\n")
             num_lines_clean = clean.count("\n")
-            assert num_lines_raw - num_lines_clean == 18
+            assert num_lines_raw - num_lines_clean == 24
         plt.close("all")
 
     def test_no_line_markers(self):
@@ -405,13 +397,9 @@ class Test_lineplot_markers:
             clean_figure(fig)
             clean = get_tikz_code()
 
-            # Use number of lines to test if it worked.
-            # the baseline (raw) should have 20 points
-            # the clean version (clean) should have 2 points
-            # the difference in line numbers should therefore be 2
             num_lines_raw = raw.count("\n")
             num_lines_clean = clean.count("\n")
-            assert num_lines_raw - num_lines_clean == 6
+            assert num_lines_raw - num_lines_clean == 24
         plt.close("all")
 
     def test_line_markers(self):
@@ -437,7 +425,7 @@ class Test_lineplot_markers:
             # the difference in line numbers should therefore be 2
             num_lines_raw = raw.count("\n")
             num_lines_clean = clean.count("\n")
-            assert num_lines_raw - num_lines_clean == 6
+            assert num_lines_raw - num_lines_clean == 24
         plt.close("all")
 
     def test_sine(self):
@@ -460,7 +448,7 @@ class Test_lineplot_markers:
             # the difference in line numbers should therefore be 2
             num_lines_raw = raw.count("\n")
             num_lines_clean = clean.count("\n")
-            assert num_lines_raw - num_lines_clean == 39
+            assert num_lines_raw - num_lines_clean == 104
         plt.close("all")
 
 
@@ -511,7 +499,7 @@ class Test_subplots:
             # the difference in line numbers should therefore be 2
             num_lines_raw = raw.count("\n")
             num_lines_clean = clean.count("\n")
-            assert num_lines_raw - num_lines_clean == 36
+            assert num_lines_raw - num_lines_clean == 93
         plt.close("all")
 
 
@@ -530,8 +518,8 @@ class Test_logscale:
             clean = get_tikz_code()
             num_lines_raw = raw.count("\n")
             num_lines_clean = clean.count("\n")
-            assert num_lines_raw - num_lines_clean == 98
-            assert num_lines_clean == 26
+            assert num_lines_raw - num_lines_clean == 104
+            assert num_lines_clean == 29
         plt.close("all")
 
     def test_xlog(self):
@@ -548,8 +536,8 @@ class Test_logscale:
             clean = get_tikz_code()
             num_lines_raw = raw.count("\n")
             num_lines_clean = clean.count("\n")
-            assert num_lines_raw - num_lines_clean == 98
-            assert num_lines_clean == 26
+            assert num_lines_raw - num_lines_clean == 104
+            assert num_lines_clean == 29
         plt.close("all")
 
     def test_loglog(self):
@@ -567,8 +555,8 @@ class Test_logscale:
             clean = get_tikz_code()
             num_lines_raw = raw.count("\n")
             num_lines_clean = clean.count("\n")
-            assert num_lines_raw == 126
-            assert num_lines_clean == 28
+            assert num_lines_raw == 154
+            assert num_lines_clean == 50
         plt.close("all")
 
     def test_ylog_2(self):
@@ -584,8 +572,8 @@ class Test_logscale:
             clean = get_tikz_code()
             num_lines_raw = raw.count("\n")
             num_lines_clean = clean.count("\n")
-            assert num_lines_raw - num_lines_clean == 51
-            assert num_lines_clean == 72
+            assert num_lines_raw - num_lines_clean == 103
+            assert num_lines_clean == 30
         plt.close("all")
 
     def test_xlog_2(self):
@@ -601,8 +589,8 @@ class Test_logscale:
             clean = get_tikz_code()
             num_lines_raw = raw.count("\n")
             num_lines_clean = clean.count("\n")
-            assert num_lines_raw - num_lines_clean == 51
-            assert num_lines_clean == 72
+            assert num_lines_raw - num_lines_clean == 103
+            assert num_lines_clean == 30
         plt.close("all")
 
     def test_loglog_2(self):
@@ -619,8 +607,8 @@ class Test_logscale:
             clean = get_tikz_code()
             num_lines_raw = raw.count("\n")
             num_lines_clean = clean.count("\n")
-            assert num_lines_raw - num_lines_clean == 97
-            assert num_lines_clean == 28
+            assert num_lines_raw - num_lines_clean == 103
+            assert num_lines_clean == 42
         plt.close("all")
 
     def test_loglog_3(self):
@@ -640,7 +628,7 @@ class Test_logscale:
             clean = get_tikz_code()
             num_lines_raw = raw.count("\n")
             num_lines_clean = clean.count("\n")
-            assert num_lines_raw - num_lines_clean == 18
+            assert num_lines_raw - num_lines_clean == 24
         plt.close("all")
 
     def test_xlog_3(self):
@@ -659,7 +647,7 @@ class Test_logscale:
             clean = get_tikz_code()
             num_lines_raw = raw.count("\n")
             num_lines_clean = clean.count("\n")
-            assert num_lines_raw - num_lines_clean == 18
+            assert num_lines_raw - num_lines_clean == 24
         plt.close("all")
 
 

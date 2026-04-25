@@ -1,10 +1,10 @@
 \begin{tikzpicture}
 
 \definecolor{chocolate2267451}{RGB}{226,74,51}
-\definecolor{dimgray85}{RGB}{85,85,85}
+\definecolor{dimgrey85}{RGB}{85,85,85}
 \definecolor{gainsboro229}{RGB}{229,229,229}
 \definecolor{greenyellow17025576}{RGB}{170,255,76}
-\definecolor{lightgray204}{RGB}{204,204,204}
+\definecolor{lightgrey204}{RGB}{204,204,204}
 
 \begin{axis}[
 axis background/.style={fill=gainsboro229},
@@ -16,22 +16,22 @@ legend style={
   text opacity=1,
   at={(0.03,0.03)},
   anchor=south west,
-  draw=lightgray204,
+  draw=lightgrey204,
   fill=gainsboro229
 },
 tick align=outside,
 tick pos=left,
 title={Simple plot \(\displaystyle \frac{\alpha}{2}\)},
 x grid style={white},
-xlabel=\textcolor{dimgray85}{time(s)},
+xlabel=\textcolor{dimgrey85}{time(s)},
 xmajorgrids,
 xmin=-0.095, xmax=1.995,
-xtick style={color=dimgray85},
+xtick style={color=dimgrey85},
 y grid style={white},
-ylabel=\textcolor{dimgray85}{Voltage (mV)},
+ylabel=\textcolor{dimgrey85}{Voltage (mV)},
 ymajorgrids,
 ymin=-1.1, ymax=1.1,
-ytick style={color=dimgray85}
+ytick style={color=dimgrey85}
 ]
 \addplot [semithick, greenyellow17025576, mark=*, mark size=3, mark options={solid}]
 table {%
