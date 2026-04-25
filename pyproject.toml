@@ -36,6 +36,5 @@ dependencies = [
 ]
 
 [project.urls]
-Code = "https://github.com/nschloe/tikzplotlib"
-Issues = "https://github.com/nschloe/tikzplotlib/issues"
-Funding = "https://github.com/sponsors/nschloe"
+Code = "https://github.com/henrypfister/tikzplotlib"
+Issues = "https://github.com/henrypfister/tikzplotlib/issues"
