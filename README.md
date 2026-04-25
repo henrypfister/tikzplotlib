@@ -1,3 +1,17 @@
+> **Unofficial fork — repaired and maintained.**
+>
+> This is a fork of the original [nschloe/tikzplotlib](https://github.com/nschloe/tikzplotlib)
+> repository, which was last actively maintained a few years ago and has since stopped working
+> with modern Python, NumPy, and Matplotlib versions. This fork incorporates community fixes
+> from upstream pull requests and additional patches to restore compatibility.
+>
+> **Current version: 0.11.0**
+>
+> Install directly from this fork:
+> ```bash
+> pip install git+https://github.com/henrypfister/tikzplotlib.git
+> ```
+
 <p align="center">
   <a href="https://github.com/nschloe/tikzplotlib"><img alt="tikzplotlib" src="https://nschloe.github.io/tikzplotlib/logo-tikzplotlib.svg" width="60%"></a>
   <p align="center">The artist formerly known as <em>matplotlib2tikz.</em></p>
@@ -7,7 +21,7 @@
 [![Packaging status](https://repology.org/badge/tiny-repos/python:tikzplotlib.svg)](https://repology.org/project/python:tikzplotlib/versions)
 [![PyPI pyversions](https://img.shields.io/pypi/pyversions/tikzplotlib.svg?style=flat-square)](https://pypi.org/pypi/tikzplotlib/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1173089.svg?style=flat-square)](https://doi.org/10.5281/zenodo.1173089)
-[![GitHub stars](https://img.shields.io/github/stars/nschloe/tikzplotlib.svg?style=flat-square&logo=github&label=Stars&logoColor=white)](https://github.com/nschloe/tikzplotlib)
+[![GitHub stars](https://img.shields.io/github/stars/henrypfister/tikzplotlib.svg?style=flat-square&logo=github&label=Stars&logoColor=white)](https://github.com/henrypfister/tikzplotlib)
 [![Downloads](https://pepy.tech/badge/tikzplotlib/month?style=flat-square)](https://pepy.tech/project/tikzplotlib)
 
 <!--[![PyPi downloads](https://img.shields.io/pypi/dm/tikzplotlib.svg?style=flat-square)](https://pypistats.org/packages/tikzplotlib)-->
@@ -126,14 +140,15 @@ Notably, [3D plots don't work](https://github.com/matplotlib/matplotlib/issues/7
 
 ### Installation
 
-tikzplotlib is [available from the Python Package
-Index](https://pypi.org/project/tikzplotlib/), so simply do
+The original package is [available from the Python Package
+Index](https://pypi.org/project/tikzplotlib/), but the PyPI release is outdated
+and no longer works with current NumPy/Matplotlib versions.
 
-```
-pip install tikzplotlib
-```
+To install this repaired fork directly from GitHub:
 
-to install.
+```bash
+pip install git+https://github.com/henrypfister/tikzplotlib.git
+```
 
 ### Usage
 
@@ -219,7 +234,7 @@ to install.
 
 If you experience bugs, would like to contribute, have nice examples of what tikzplotlib
 can do, or if you are just looking for more information, then please visit
-[tikzplotlib's GitHub page](https://github.com/nschloe/tikzplotlib).
+[this fork's GitHub page](https://github.com/henrypfister/tikzplotlib).
 
 ### Testing
 
