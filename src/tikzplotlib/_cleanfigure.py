@@ -496,8 +496,8 @@ def _remove_NaNs(data):
             )
         ]
 
-    id_first = np.argwhere(np.logical_not(id_nan))[0]
-    id_last = np.argwhere(np.logical_not(id_nan))[-1]
+    id_first = np.argwhere(np.logical_not(id_nan))[0, 0]
+    id_last = np.argwhere(np.logical_not(id_nan))[-1, 0]
 
     if _isempty(id_first):
         # remove entire data

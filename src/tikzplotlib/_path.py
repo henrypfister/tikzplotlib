@@ -22,7 +22,12 @@ def draw_path(data, path, draw_options=None, simplify=None):
     ):
         return data, "", None, False
 
-    x_is_date = isinstance(data["current mpl axes obj"].xaxis.converter, DateConverter)
+    xaxis = data["current mpl axes obj"].xaxis
+    if hasattr(xaxis, "get_converter"):
+        x_converter = xaxis.get_converter()
+    else:
+        x_converter = xaxis.converter
+    x_is_date = isinstance(x_converter, DateConverter)
     nodes = []
     ff = data["float format"]
     xformat = "" if x_is_date else ff
